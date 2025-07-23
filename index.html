@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idara-tul-mustafa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        /* Universal Box Sizing for better layout control */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+        }
+
+        /* Header and Navigation */
+        .navbar-brand img {
+            max-width: 120px; /* Adjust logo size */
+            height: auto;
+        }
+
+        .navbar-nav {
+            margin-right: auto; /* Pushes nav items to the right */
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            text-align: center; 
+        }
+
+        /* Front Page Section - Banner Image */
+        .front-page {
+            text-align: center;
+            padding: 60px 20px; 
+            background-image: url('https://i.ytimg.com/vi/2QV2qsIKrjE/maxresdefault.jpg');  
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            min-height: 400px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+        }
+
+        .front-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 1; 
+        }
+
+        .front-page > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .front-page-text1 {
+            font-size: 1.5rem; 
+            color: white; 
+            margin-bottom: 5px;
+        }
+
+        .front-page-text2,
+        .front-page-text3 {
+            font-size: 2.5rem; 
+            font-weight: bold;
+            color: white; 
+            margin-bottom: 5px;
+        }
+
+        /* Front Page Colour Boxes */
+        .frontpage-colour-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px; 
+            padding: 30px 15px; 
+        }
+
+        .frontpage-colour-boxes > div {
+            flex: 1 1 calc(25% - 15px); 
+            min-width: 200px; 
+            padding: 25px 15px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frontpage-colour-boxes1 { background-color: #007bff; }
+        .frontpage-colour-boxes2 { background-color: #28a745; }
+        .frontpage-colour-boxes3 { background-color: #ffc107; color: #343a40; }
+        .frontpage-colour-boxes4 { background-color: #dc3545; }
+
+        .frontpage-colour-boxes-text-heading {
+            font-size: 2rem; 
+            margin-bottom: 5px;
+        }
+
+        .frontpage-colour-boxes-text {
+            font-size: 1.1rem; 
+        }
+
+        /* Course Offerings Heading */
+        h1 {
+            text-align: center;
+            padding: 60px 20px 30px; 
+            font-size: 2.2rem; 
+            color: #343a40;
+        }
+
+        /* Course Cards Section */
+        .course-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px; 
+            padding: 20px 15px; 
+        }
+
+        .course-card-container {
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .course-card-container img {
+            width: 100%;
+            height: 220px; 
+            object-fit: cover; 
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .hifz-box-heading {
+            font-size: 1.4rem; 
+            margin: 15px 0 5px;
+            color: #343a40;
+            padding: 0 15px;
+        }
+
+        .hifz-box {
+            font-size: 0.95rem; /* Adjusted font size */
+            color: #6c757d;
+            margin-bottom: 15px;
+            padding: 0 15px;
+        }
+
+        .course-card-container hr {
+            width: 80%;
+            border-color: #eee;
+            margin: 15px 0;
+        }
+
+        .hifz-box-online {
+            font-size: 0.95rem; /* Adjusted font size */
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .apply-now-button {
+         
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .apply-now-button:hover {
+            background-color: #218838;
+        }
+
+        .apply-now-button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f0f0f0;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+            color: #555;
+        }
+
+        footer img {
+            height: 50px; /* Adjusted footer logo size */
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem; /* Adjusted font size */
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 8px; /* Adjusted margin */
+            transition: color 0.3s ease;
+            font-size: 0.9rem; /* Adjusted font size */
+        }
+
+        footer a:hover {
+            color: #0056b3;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+
+        /* Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {
+            .front-page {
+                padding: 40px 15px;
+                min-height: 300px; /* Smaller height for mobile banner */
+            }
+            .front-page-text1 {
+                font-size: 1.2rem;
+            }
+            .front-page-text2,
+            .front-page-text3 {
+                font-size: 1.8rem;
+            }
+
+            .frontpage-colour-boxes > div {
+                flex: 1 1 100%; 
+                min-width: unset; 
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                padding: 40px 15px 20px;
+            }
+
+            .course-card-container {
+                width: 90%; 
+                max-width: 320px; 
+            }
+
+            footer p, footer a {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .front-page-text2,
+            .front-page-text3 {
+                font-size: 2.2rem;
+            }
+
+            .frontpage-colour-boxes > div {
+                flex: 1 1 calc(50% - 15px);
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .course-card-container {
+                width: calc(50% - 25px); 
+                max-width: 320px; 
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .frontpage-colour-boxes > div {
+                flex: 1 1 calc(50% - 15px); 
+            }
+
+            .course-card-container {
+                width: calc(33.333% - 25px);
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .frontpage-colour-boxes > div {
+                flex: 1 1 calc(25% - 15px); 
+            }
+            .course-card-container {
+                width: calc(33.333% - 25px); 
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .course-card-container {
+                width: 320px; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+ <header>
+       <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="#"><img  width="150px" src="logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link "  href="./contact.html">Contact</a>
+                        </li>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="front-page">
+        <p class="front-page-text1">Welcome!</p>
+        <h3 class="front-page-text2">Idara-tul-Mustafa</h3>
+        <h3 class="front-page-text3">International</h3>
+    </div>
+
+    <div class="frontpage-colour-boxes">
+        <div class="frontpage-colour-boxes1">
+            <div>
+                <b>
+                    <h3 class="frontpage-colour-boxes-text-heading">15+</h3>
+                </b>
+                <br>
+                <h2 class="frontpage-colour-boxes-text">Courses Programs</h2>
+            </div>
+        </div>
+
+        <div class="frontpage-colour-boxes2">
+            <div>
+                <b>
+                    <h3 class="frontpage-colour-boxes-text-heading">10</h3>
+                </b>
+                <br>
+                <h2 class="frontpage-colour-boxes-text">Expert Trainers</h2>
+            </div>
+        </div>
+
+        <div class="frontpage-colour-boxes3">
+            <div>
+                <b>
+                    <h3 class="frontpage-colour-boxes-text-heading">5000+</h3>
+                </b>
+                <br>
+                <h2 class="frontpage-colour-boxes-text">Participants</h2>
+            </div>
+        </div>
+
+        <div class="frontpage-colour-boxes4">
+            <div>
+                <b>
+                    <h3 class="frontpage-colour-boxes-text-heading">15+</h3>
+                </b>
+                <br>
+                <h2 class="frontpage-colour-boxes-text">Courses Programs</h2>
+            </div>
+        </div>
+    </div>
+
+    <h1>Offering a variety of courses for corporate professionals</h1>
+    <br>
+
+    <div class="container text-center my-0">
+        <h1 class="display-4 fw-bold">Offering a variety of courses for corporate</h1>
+        <h2 class="h3 text-muted">Professionals</h2>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-100 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            <div class="col">
+                <div class="card h-40 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnxtzsPXqyl0sKvepuls3uD8Ik6H5X5p9e7A&s"
+                        class="card-img-top img-fluid" alt="Muslim boy holding Quran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-4">Best Tech Course</h5>
+                        <p class="card-text text-muted fs-6">Data Analytics for Business </p>
+                        <hr class="my-3">
+                        <p class="card-text fw-semibold">Onsite/Online</p>
+                        <a href="./applynow.html" class="btn btn-primary mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://i.ytimg.com/vi/GQS7wPujL2k/maxresdefault.jpg"
+                        class="card-img-top img-fluid" alt="Muslim boy holding Quran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-4"> Graphic Designing</h5>
+                        <p class="card-text text-muted fs-6">photoshop | illustrator </p>
+                        <hr class="my-3">
+                        <p class="card-text fw-semibold">Onsite/Online</p>
+                        <a href="./applynow.html" class="btn btn-primary mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://i.ytimg.com/vi/B-ytMSuwbf8/maxresdefault.jpg"
+                        class="card-img-top img-fluid" alt="Muslim boy holding Quran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-4"> Web Designing</h5>
+                        <p class="card-text text-muted fs-6"> Html | Css | Javascript</p>
+                        <hr class="my-3">
+                        <p class="card-text fw-semibold">Onsite/Online</p>
+                       <a href="./applynow.html" class="btn btn-primary mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                    <img height="210px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxbWPBxQwgZrd_AOZhpIVyHmTirQfoCGN0g&s"
+                        class-img-top img-fluid alt="Muslim boy holding Quran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-4">Digital Marketing</h5>
+                        <p class="card-text text-muted fs-6"> Analyzing data | Creating valuable content</p>
+                        <hr class="my-3">
+                        <p class="card-text fw-semibold mt-0">Onsite/Online</p>
+                        <a href="./applynow.html" class="btn btn-primary mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://www.myoxfordenglish.es/wp-content/uploads/2020/12/English-for-your-profession-1-1200x717.jpg"
+                        class="card-img-top img-fluid" alt="Muslim boy holding Quran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-4">English Language</h5>
+                        <p class="card-text text-muted fs-6"> Basic Grammar | Mastering your vocabulary </p>
+                        <hr class="my-3">
+                        <p class="card-text fw-semibold">Onsite/Online</p>
+                        <a href="./applynow.html" class="btn btn-primary mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://meritacademy.co.uk/wp-content/uploads/2024/03/Professional-Plumbing.jpg" alt="Muslim boy holding Quran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-4">Plumbing Training</h5>
+                        <p class="card-text text-muted fs-6">Installation of kitchen and bathroom fixtures  
+</p>
+                        <hr class="my-3">
+                        <p class="card-text fw-semibold">Onsite/Online</p>
+                        <a href="./applynow.html" class="btn btn-primary mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div style="max-width: 1000px; margin: auto;">
+            <img src="logo.png" alt="Idaratul Mustafa Logo">
+            <p>Idaratul Mustafa - Islamic Education Center</p>
+            <p>📍 Address: Main Road, Your City, Pakistan</p>
+            <p>📞 Phone: 0300-1234567 | 📧 Email: info@idaratulmustafa.com</p>
+
+            <div>
+                <a href="https://www.facebook.com/MRSMofficial/" target="_blank">Facebook</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com/muhammadrazasaqibmustafai/" target="_blank">Instagram</a>
+            </div>
+
+            <p>© 2025 Idaratul Mustafa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

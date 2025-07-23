@@ -1,0 +1,334 @@
+body{ font-family: sans-serif;
+}
+
+
+
+
+
+.front-page{ margin-top: 10px;
+ background-color: rgb(255, 255, 255);
+ height: 490px;
+ width: auto;
+ background-image: url(https://idaratulmustafa.com/uploads/pi_1651423967.jpg);
+}
+.front-page-text1{
+    font-size: 50px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  padding-top: 180px;
+  	
+  
+}
+
+.front-page-text2{
+  font-size: 50px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  padding-top: 0px;}
+
+.front-page-text3{
+  font-size: 40px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  padding-top: 0px;
+ 
+}
+
+
+
+
+
+.frontpage-colour-boxes{display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
+
+.frontpage-colour-boxes1{ height: 150px;
+  width: 250px;
+  background-color: rgb(241, 237, 202);
+margin-top: 100px;
+margin-left: 25px;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+
+
+}
+.frontpage-colour-boxes2{ height: 150px;
+  width: 250px;
+  background-color: rgb(209, 214, 213);
+margin-top: 90px;
+margin-left: 25px;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+}
+.frontpage-colour-boxes3{ height: 150px;
+  width: 250px;
+  background-color: rgb(244, 204, 253);
+margin-top: 90px;
+margin-left: 25px;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+}
+.frontpage-colour-boxes4{ height: 150px;
+  width: 250px;
+  background-color: rgb(193, 225, 255);
+margin-top: 90px;
+margin-left: 25px;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+}
+
+
+.frontpage-colour-boxes-text-heading{
+  font-size: 30px; 
+  position: relative;
+  left: 75px;
+  top: 40px;
+  
+}
+
+
+.frontpage-colour-boxes-text{
+  font-size: 16px; 
+  position: relative;
+  left: 75px;
+  top: 10px;
+  
+}
+
+.frontpage-coursecard-container{  
+   height: 500px;
+  width: 380px;
+  background-color: black;
+  position: absolute;
+ left: 80px;
+  border-radius: 25px;
+}
+
+
+.course-heading{ justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+
+}
+.course-heading-2{ justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 0px;
+
+}
+.course-card-container{
+  height: 500px;
+  width: 330px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 80px;
+  margin-top: 80px;
+  border-radius: 25px;
+ 
+  box-shadow: 1px 0px 5px black;
+}
+
+.hifz-box-heading{ font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  
+  padding-top:10px;
+    padding-left:20px;
+  
+
+}
+.hifz-box{
+   font-size: 20px;
+  justify-content: center;
+
+  align-items: start;
+
+    padding-left:20px;
+}
+.hifz-box-online{ font-size: 16px;
+  justify-content: center;
+ 
+  
+  align-items: start;
+    padding-left:20px;
+
+}
+.apply-now-button{ width: 100px;
+  height: 50px;
+  background-color: rgb(12, 94, 135);
+  color: white;
+  position: relative;
+  left: 200px;
+   top: 10px;
+  border-radius: 40px;
+  box-shadow: 1px 0px 9px black;
+  border: 0px;
+  text-decoration: none;
+}
+.course-cards{
+  display: inline;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
+}
+  
+footer {
+  background-color: #f0f0f0;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #006666;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #004444;
+  text-decoration: underline;
+}
+.customersupport-container{ height: 150px;
+  width: 250px;
+  background-color: rgb(2, 3, 3);
+}
+  
+
+    h1 {
+      margin-top: 50px;
+      font-size: 36px;
+    }
+
+    p.subtitle {
+      font-size: 18px;
+      color: #555;
+    }
+     .contact-box {
+      background-color: #0047FF;
+      color: white;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .contact-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .contact-box i {
+      margin-right: 8px;
+    }
+
+
+
+  #customer-support{
+    height: 300px;
+    width: 300px;
+background-color: #0047FF;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+  .front-page { height: 400px;
+ width: 500px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+   
+  }
+  .front-page-text1{
+    font-size:30px ;
+     text-shadow: 8px 3px px black;
+  }
+  .front-page-text2{   font-size:30px ;
+     text-shadow: 8px 3px px black;
+
+  }
+   .front-page-text3{ font-size:28px ;
+     text-shadow: 8px 3px px black;
+
+   }
+   .frontpage-colour-boxes{ flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+
+   }
+   .course-banerheading{ padding-left: 20px;
+
+   }
+}
